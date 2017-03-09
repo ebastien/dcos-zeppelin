@@ -24,5 +24,7 @@ RUN wget http://www.apache.org/dist/zeppelin/zeppelin-0.7.0/zeppelin-0.7.0-bin-a
 RUN tar xzvf zeppelin-0.7.0-bin-all.tgz
 WORKDIR /zeppelin-0.7.0-bin-all
 ADD zeppelin-env.sh conf/zeppelin-env.sh
+ADD zeppelin-site.xml conf/zeppelin-site.xml
+ADD shiro.ini conf/shiro.ini
 
 CMD ["bin/zeppelin.sh", "start"]
